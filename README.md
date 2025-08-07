@@ -6,7 +6,9 @@
 
 ## Getting Started
 
-To run FCL programs, you'll need the FCL interpreter and a simple batch file wrapper (for Windows).
+To run FCL programs, you'll need the FCL interpreter and a simple batch file wrapper.
+> [!IMPORTANT]
+> FCL is for windows only, for now.
 
 ### 1. Prerequisites
 
