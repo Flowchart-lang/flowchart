@@ -224,6 +224,11 @@ Once you have `flowchart.py` and `flowchart.bat` set up, and an `.fcl` program f
    ```cmd
    flowchart -r myprogram.fcl
    ```
+   Or if you want to run it step-by-step:
+
+   ```cmd
+   flowchart -s myprogram.fcl
+   ```
 
 ---
 
