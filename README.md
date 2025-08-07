@@ -54,7 +54,7 @@ END
 
 ---
 
-## Commands
+## Commands & Extending FCL
 
 ### `START`
 
@@ -189,6 +189,24 @@ END
 
 ---
 
+### Extending FCL with Libraries
+
+FCL supports custom commands via Python libraries in the `libs/` folder. Libraries are loaded automatically when the interpreter starts. You can use the `IMPORT libraryName` command in your FCL code for clarity, but it is optional.
+
+#### Example: Math Library
+
+The included `math.py` library adds an `ADD` command:
+
+```fcl
+ADD result = a + b
+```
+
+This sets `result` to the sum of variables or numbers `a` and `b`.
+
+---
+
+---
+
 ## Running an FCL Program
 
 Once you have `flowchart.py` and `flowchart.bat` set up, and an `.fcl` program file (e.g., `myprogram.fcl`), you can run it from your Command Prompt:
@@ -209,9 +227,9 @@ Once you have `flowchart.py` and `flowchart.bat` set up, and an `.fcl` program f
 
 ---
 
-## Example FCL Program
+## Example FCL Programs
 
-Here's an example of an FCL program (`example.fcl`):
+### Basic Example
 
 ```fcl
 START
@@ -237,11 +255,41 @@ ENDIF
 
 PRINT "This is a simple application with conditional logic."
 END
+```
 
+### Advanced Example: Fibonacci Sequence
+
+This example uses the `ADD` command from the math library:
+
+```fcl
+START
+-- This program calculates and prints the Fibonacci sequence.
+SET a = 0
+SET b = 1
+SET n = 10
+SET counter = 0
+IMPORT math
+PRINT "Starting Fibonacci sequence generation..."
+WHILE counter != n
+    PRINT a
+    ADD next_fib = a + b
+    SET a = b
+    SET b = next_fib
+    INCREMENT counter
+ENDWHILE
+PRINT "Fibonacci sequence finished!"
+END
 ```
 
 ---
 
 ## Error Handling
 
-* The interpreter will display an error message and exit if you use an undefined variable, invalid syntax, or mismatched control blocks (e.g., missing `ENDIF` or
+* The interpreter will display an error message and exit if you use an undefined variable, invalid syntax, or mismatched control blocks (e.g., missing `ENDIF` or `ENDWHILE`).
+* Custom libraries can also print errors if their commands are used incorrectly.
+
+---
+
+## Creating Your Own Library
+
+To add new commands, create a Python file in the `libs/` folder. See `libs/template.py` for a starting point. Each library must define a `commands` dictionary mapping FCL command names to Python functions.
