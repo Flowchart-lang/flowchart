@@ -215,18 +215,29 @@ Here's an example of an FCL program (`example.fcl`):
 
 ```fcl
 START
--- This program uses a WHILE loop to count from 0 to 4.
+PRINT "Welcome to your first FCL application!"
+PRINT "Please enter your name:"
+INPUT userName
+PRINT "Hello, " + userName + "!"
 
-PRINT "Starting the counting loop..."
-SET count = 0
+IF userName == "Alice"
+    PRINT "What a lovely name, Alice!"
+ELSE
+    PRINT "That's a nice name too!"
+ENDIF
 
-WHILE count != 5
-    PRINT "The current count is: " + count
-    INCREMENT count
-ENDWHILE
+SET favoriteNumber = 42
+PRINT "Your favorite number is: " + favoriteNumber
 
-PRINT "The loop has finished!"
+IF favoriteNumber != 100
+    PRINT "That's not 100!"
+ELSE
+    PRINT "Wow, 100 is a great number!"
+ENDIF
+
+PRINT "This is a simple application with conditional logic."
 END
+
 ```
 
 ---
