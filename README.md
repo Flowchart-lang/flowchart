@@ -9,6 +9,7 @@
 To run FCL programs, you'll need the FCL interpreter and a simple batch file wrapper.
 > [!IMPORTANT]
 > FCL is for windows only, for now.
+> You also need `requests` installed for downloading libs
 
 ### 1. Prerequisites
 
