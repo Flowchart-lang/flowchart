@@ -19,7 +19,7 @@ To run FCL programs, you'll need the FCL interpreter, a package manager, and a s
 
 * Save the interpreter code (typically named `flowchart.py`) to a directory, for example:
 
-  \* `C:\FlowchartLang\flowchart.py`
+   * `C:\FlowchartLang\flowchart.py`
 
 #### Create the Launchers (Windows)
 
