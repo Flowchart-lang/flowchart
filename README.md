@@ -1,4 +1,4 @@
-# Flowchart-Lang (FCL)
+# Flowchart-Lang (FCL) : v1.2.0
 
 **Flowchart-Lang (FCL)** is a simple, experimental programming language designed to mimic the sequential and conditional logic of flowcharts. It's interpreted by a Python script and is intended for learning basic programming concepts.
 
